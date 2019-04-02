@@ -1,9 +1,89 @@
 body {
-    background-image: url(../images/2-WordGuess.jpg);
-    background-repeat: no-repeat;
-    background-size: 900px 300px;
-    background-position: right top;
-    /* background-color: #cccccc; */
-    /* font-style: white; */
+  background: black;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  margin: 20px;
+  width: 95%;
+}
 
-   }
+.header {
+  background-color: #C0C0C0;
+  color: #007399;
+  text-align: center;
+  padding: 15px;
+  border-bottom: 5px solid #007399;
+  border-top: 5px solid #007399;
+}
+.container {
+  width: 60%;
+  background-color: #C0C0C0;
+  color: #007399;
+  border: 5px solid #007399;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.col-md-12 {
+  padding: 5px;
+  margin: auto;
+}
+.populate {
+  background-color: #007399;
+  color: white;
+  width: 50%;
+  margin: auto;
+}
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+
+}
+.info {
+  font-size: 24px;
+}
+
+
+
+/*body color/fonts*/
+
+.title-psychicGame {
+	font-weight: 100px;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+
+}
+
+
+
+
+.title-text{
+	text-align:center;
+	font-weight: 575;
+	font-size: 30px;
+	font-family: 'Orbitron', sans-serif;
+	font-color: #ffffff;
+
+}
+
+.scorecolor {
+	color: #330080;
+}
+.premade {
+	color: rgb(51, 0, 128);
+	font-weight: 600;
+	font-family: 'Orbitron', sans-serif;
+}
+
+
+/*side panel*/
+.paneltitle {
+  margin-left: 30%;
+  text-align: center;
+
+}

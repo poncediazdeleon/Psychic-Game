@@ -1,77 +1,98 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
-	<meta charset="utf-8">
-	<title>Psychic Game</title>
-	<link rel="stylesheet" href="assets/css/style.css" >
+	<title>The Pyschic Game</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 </head>
-<body>
 
-	<div id="game">
-		<h1> The Psychic Game </h1>
-		<p>Guess what letter I'm thinking of!</p>
-		<p>Wins:</p>
-		<p>Losses:</p>
-		<p>Guesses Left:</p>
-		<p>Your Guesses so far:</p>
+<body>
+	<div class="header">
+		<div class="row">
+			<h1>Psychic Game</h1>
+
+
+		</div>
 	</div>
 
-	<script type="text/javascript">
-		
-		 var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
+	<div class="container">
+		<div class="row">
+			<p> Press any button to start guessing! Use your keyboard to guess the letters
+				from "a-z". Each letter that you guess correct will reward you with a win and will not deduct any guess
+				points from you. Once you have used up all your gusses you lose. You have a limited amount of
+				guesses!</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<h3>Guess what letter I'm thinking of...</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-12, info">
+				Wins:
+			</div>
+		</div>
 
-		 var wins = 0;
-		 var losses = 0;
-		 var numGuesses = 9;
-		 var guessChoices = [];
+		<div class="row">
+			<div class="col-md-12">
+				<div class="populate" id="winCount">
+					0
+				</div>
+			</div>
+		</div>
 
-		 document.onkeyup = function(event) {
+		<div class="row">
+			<div class="col-md-12, info">
+				Losses:
+			</div>
+		</div>
 
-		 	var userGuess = event.key;
+		<div class="row">
+			<div class="col-md-12">
+				<div class="populate" id="lossCount">
+					0
+				</div>
+			</div>
+		</div>
 
-		 	var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+		<div class="row">
+			<div class="col-md-12, info">
+				Guesses Remaining:
+			</div>
+		</div>
 
-		 	var options = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",];
-		 	
+		<div class="row">
+			<div class="col-md-12">
+				<div class="populate" id="guessesRemaining">
+					10
+				</div>
+			</div>
+		</div>
 
-			if (options.indexOf(userGuess) > -1) {
+		<div class="row">
+			<div class="col-md-12, info">
+				Your Guesses:
+			</div>
+		</div>
 
-				if (userGuess === computerGuess) {
-					wins++;
-					numGuesses = 9;
-					guessChoices = [];
-				}
+		<div class="row">
+			<div class="col-md-12">
+				<div class="populate" id="guessedLetters">
+					guesses..
+				</div>
+			</div>
+		</div>
 
-				if (userGuess != computerGuess) {
-					numGuesses --;
-					guessChoices.push(userGuess);
-				}
+	</div>
 
-				if (numGuesses === 0) {
 
-				numGuesses = 9;
-				losses ++;
-				guessChoices = [];
 
-				
-			}
-
-			var html = 
-			"<h1> The Psychic Game </h1>" +
-			"<p>Guess what letter I'm thinking of!</p>" +
-			"<p>Wins: " + wins + "</p>" +
-			"<p>Losses: " + losses + "</p>" +
-			"<p>Guesses Left: " + numGuesses + "</p>" +
-			"<p>Your Guesses so far: " + guessChoices.join(", ") + "</p>";
-
-			document.querySelector("#game").innerHTML = html;
-
-			
-			}
-		};
-
-	</script>
+	<script src="assets/javascript/game.js"></script>
 
 </body>
+
 </html>
