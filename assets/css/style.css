@@ -8,17 +8,17 @@ body {
 
 .header {
   background-color: #C0C0C0;
-  color: #007399;
+  color: purple;
   text-align: center;
   padding: 15px;
-  border-bottom: 5px solid #007399;
-  border-top: 5px solid #007399;
+  border-bottom: 5px solid purple;
+  border-top: 5px solid purple ;
 }
 .container {
   width: 60%;
   background-color: #C0C0C0;
-  color: #007399;
-  border: 5px solid #007399;
+  color: purple;
+  border: 5px solid purple;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
@@ -29,7 +29,7 @@ body {
   margin: auto;
 }
 .populate {
-  background-color: #007399;
+  background-color: purple;
   color: white;
   width: 50%;
   margin: auto;
